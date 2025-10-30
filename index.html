@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muslim Bayschanov - portoflio BTS SIO</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MB</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="#profile" class="nav-link">Profil</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Formations</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Expériences</a></li>
+                <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Compétences</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projets</a></li>
+                <li class="nav-item"><a href="#research" class="nav-link">Veille</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background" id="hero-background"></div>
+        <div class="floating-particles"></div>
+        <div class="hero-content">
+            <div class="hero-avatar" id="hero-avatar"></div>
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Muslim Bayschanov</span>
+                    <span class="title-line">étudiant en informatique</span>
+                </h1>
+                <p class="hero-subtitle">Entre code et réseau, je construis des solutions pour le monde digital.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                        <span>Voir mes travaux</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                        <span>Me contacter</span>
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Profil</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="profile-content">
+                <div class="profile-image">
+                    <div class="image-container">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300d4ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23ff00ff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='80' fill='url(%23grad1)'/%3E%3Ctext x='100' y='110' text-anchor='middle' fill='white' font-family='Orbitron' font-size='24' font-weight='bold'%3EAC%3C/text%3E%3C/svg%3E" alt="Muslim Bayschanov">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <div class="quote-container">
+                        <blockquote class="animated-quote">
+                            « Je m'appelle Muslim Bayschanov. Je suis actuellement étudiant au lycée public Turgot de Paris dans le 3eme arrondisement en première année de BTS SIO (Services Informatiques aux Organisations) dans l'option SISR (Solutions d’Infrastructure, Systèmes et Réseaux) axée sur l’administration des systèmes et des réseaux. <br><br>
+                            Actuellement toujours en cours d'étude, je vous propose sur ce portfolio de retrouver ci-dessous les différentes études, et projet professionnel que j'ai pu entreprendre au sein de ma carrière. <br><br>
+                            Vous retrouverez ci-dessous mon CV ainsi que mes différents projets. »
+                        </blockquote>
+                        <cite>- Muslim Bayschanov</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+<section id="education" class="education-section">
+  <div class="container">
+    <!-- Titre -->
+    <div class="section-header">
+      <h2 class="section-title">Formations</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Texte d'introduction -->
+    <div class="education-intro">
+      <div class="quote-container">
+        <blockquote class="animated-quote">
+          Avant de commencer à parler de moi, je vous propose de présenter en premier lieu ma filière dont je suis affecté. <br><br>
+          Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO) s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégrer directement le marché du travail ou continuer des études dans le domaine de l'informatique. <br><br>
+          Le BTS SIO propose deux spécialités :
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Panneaux d'options (cartes détaillées) -->
+    <div class="education-grid">
+      <div class="education-card">
+        <div class="card-header">
+          <h3>Option SISR</h3>
+          <h4>Solutions d’Infrastructure, Systèmes et Réseaux</h4>
+          <span class="duration">Administration & Réseaux</span>
+        </div>
+        <div class="card-content">
+          <p>
+            Cette spécialité forme à la gestion, à la maintenance et à la sécurisation des infrastructures réseaux et systèmes. Elle prépare à devenir un professionnel capable de garantir la disponibilité et la sécurité des services informatiques.
+          </p>
+          <ul class="achievements">
+            <li>Installation, configuration et administration des serveurs</li>
+            <li>Gestion des réseaux (VLAN, routage, sécurité)</li>
+            <li>Surveillance et maintenance du parc informatique</li>
+            <li>Déploiement de solutions de cybersécurité</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="education-card">
+        <div class="card-header">
+          <h3>Option SLAM</h3>
+          <h4>Solutions Logicielles et Applications Métiers</h4>
+          <span class="duration">Développement & Programmation</span>
+        </div>
+        <div class="card-content">
+          <p>
+            Cette spécialité forme aux métiers du développement et de la création d’applications adaptées aux besoins des entreprises. Elle met l’accent sur la conception, le codage et la gestion de bases de données.
+          </p>
+          <ul class="achievements">
+            <li>Développement d’applications web et mobiles</li>
+            <li>Création et gestion de bases de données</li>
+            <li>Analyse des besoins clients et modélisation</li>
+            <li>Maintenance et amélioration des programmes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+<div class="timeline">
+  <div class="timeline-item" data-year="2027">
+    <div class="timeline-content">
+      <h3>BTS SIO</h3>
+      <h4>Lycée public Turgot, Paris</h4>
+      <p>Spécialité Solutions d’Infrastructure, Systèmes et Réseaux (SISR)</p>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100">0</span>
+        <span class="stat-label">Objectif atteint</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item" data-year="2024">
+    <div class="timeline-content">
+      <h3>Baccalauréat Technologique STMG</h3>
+      <h4>Lycée Jean Macé, Vitry-Sur-Seine</h4>
+      <p>Spécialité Mercatique et Ressource Humaine.</p>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100">0</span>
+        <span class="stat-label">Objectif atteint</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Expériences</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-carousel">
+                <div class="carousel-container">
+                    <div class="experience-card active">
+                        <div class="card-header">
+                            <h3>Hôte de caisse</h3>
+                            <h4>Leclerc</h4>
+                            <span class="duration">2025 - Present</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Accueillir les clients de manière chaleureuse et professionnelle, les conseiller si nécessaire et garantir un passage en caisse fluide et rapide. Veiller à la précision des transactions, tout en contribuant à un environnement de travail propre et organisé.</p>
+                            <ul class="achievements">
+                                <li>Accueil et conseil des clients avec attention et courtoisie</li>
+                                <li>Gestion efficace et sécurisée des paiements et transactions</li>
+                                <li>Maintien de l’organisation, propreté et bonne présentation de l’espace caisse</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Employé polyvalent en magasin</h3>
+                            <h4>Leclerc</h4>
+                            <span class="duration">2025 - Present</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Assurer la bonne présentation des produits en rayon, veiller à leur disponibilité et contribuer à une expérience client agréable. Participer à la gestion des stocks et au réassort tout en respectant les règles de sécurité et d’organisation du magasin.</p>
+                            <ul class="achievements">
+                                <li>Mise en rayon et réassort des produits de manière efficace</li>
+                                <li>Vérification de la qualité, de la fraîcheur et de l’étiquetage des produits</li>
+                                <li>Maintien de l’ordre et de la propreté des rayons</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Développeur Junior</h3>
+                            <h4>WebSolutions Ltd.</h4>
+                            <span class="duration">2018 - 2019</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Contribué à divers projets clients, axé sur le front-end et l'optimisation de l'expérience utilisateur.</p>
+                            <ul class="achievements">
+                                <li>Developed responsive websites for 20+ clients</li>
+                                <li>Improved page load speeds by 35%</li>
+                                <li>Collaborated with design team on UI/UX improvements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="changeExperience(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeExperience(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="showCurrentExperience(1)"></span>
+                        <span class="indicator" onclick="showCurrentExperience(2)"></span>
+                        <span class="indicator" onclick="showCurrentExperience(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-card" onclick="openModal('cert1')">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>AWS Solutions Architect</h3>
+                    <p>Professional Level</p>
+                    <span class="cert-year">2023</span>
+                </div>
+                <div class="cert-card" onclick="openModal('cert2')">
+                    <div class="cert-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Google Cloud Professional</h3>
+                    <p>Cloud Developer</p>
+                    <span class="cert-year">2022</span>
+                </div>
+                <div class="cert-card" onclick="openModal('cert3')">
+                    <div class="cert-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Microsoft Azure</h3>
+                    <p>Developer Associate</p>
+                    <span class="cert-year">2022</span>
+                </div>
+                <div class="cert-card" onclick="openModal('cert4')">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Certified Ethical Hacker</h3>
+                    <p>Security Professional</p>
+                    <span class="cert-year">2021</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compétences</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-skill="react">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>React</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-item" data-skill="vue">
+                            <div class="skill-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </div>
+                            <span>Vue.js</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-item" data-skill="angular">
+                            <div class="skill-icon">
+                                <i class="fab fa-angular"></i>
+                            </div>
+                            <span>Angular</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="typescript">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span>TypeScript</span>
+                            <div class="skill-level" data-level="92"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-skill="node">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span>Node.js</span>
+                            <div class="skill-level" data-level="93"></div>
+                        </div>
+                        <div class="skill-item" data-skill="python">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span>Python</span>
+                            <div class="skill-level" data-level="88"></div>
+                        </div>
+                        <div class="skill-item" data-skill="java">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span>Java</span>
+                            <div class="skill-level" data-level="82"></div>
+                        </div>
+                        <div class="skill-item" data-skill="docker">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span>Docker</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-skill="mongodb">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>MongoDB</span>
+                            <div class="skill-level" data-level="87"></div>
+                        </div>
+                        <div class="skill-item" data-skill="postgresql">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>PostgreSQL</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="redis">
+                            <div class="skill-icon">
+                                <i class="fas fa-memory"></i>
+                            </div>
+                            <span>Redis</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="mysql">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>MySQL</span>
+                            <div class="skill-level" data-level="83"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projets</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openModal('project1')">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Solution e‑commerce full-stack avec gestion d'inventaire en temps réel</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openModal('project2')">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chat Application</h3>
+                        <p>Application de chat en temps réel avec réponses pilotées par IA et analyse de sentiments</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openModal('project3')">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management System</h3>
+                        <p>Outil collaboratif de gestion de tâches avec analyses avancées</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openModal('project4')">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Blockchain Wallet</h3>
+                        <p>Portefeuille de cryptomonnaies sécurisé avec support multi‑chaînes</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Solidity</span>
+                            <span class="tech-tag">Web3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recherche Section -->
+    <section id="research" class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Veille</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="research-content">
+                <div class="research-quote">
+                    <blockquote class="animated-quote">
+                        "L'avenir du développement web se situe à l'intersection de l'intelligence artificielle et de la créativité humaine. Mes recherches visent à créer des interfaces utilisateur plus intuitives et intelligentes."
+                    </blockquote>
+                    <cite>- Muslim Bayschanov, Recherche Paper 2023</cite>
+                </div>
+                <div class="research-papers">
+                    <div class="paper-item">
+                        <h3>AI-Driven User Interface Optimization</h3>
+                        <p>Published in IEEE Computer Society, 2023</p>
+                        <a href="#" class="paper-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="paper-item">
+                        <h3>Microservices Architecture Patterns</h3>
+                        <p>ACM Digital Library, 2022</p>
+                        <a href="#" class="paper-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="paper-item">
+                        <h3>Blockchain Integration in Web Applications</h3>
+                        <p>Journal of Web Engineering, 2022</p>
+                        <a href="#" class="paper-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Construisons quelque chose d'incroyable ensemble</h3>
+                    <p>Je suis toujours intéressé par de nouvelles opportunités et projets passionnants. N'hésitez pas à me contacter !</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>baysmuslim@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+33 6 95 13 05 64</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vitry-Sur-Seine, France</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Votre nom</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Votre email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Sujet</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Votre message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
