@@ -601,12 +601,12 @@ cite {
 }
 
 .stat-item {
-  border-radius: 8px;
-  padding: 6px 12px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    border-radius: 8px;
+    padding: 6px 12px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -747,7 +747,7 @@ cite {
     box-shadow: 0 0 10px var(--primary-color);
 }
 
-/* Section Certifications */
+/* Section Certifications (Ancien style à supprimer/écraser) */
 .certifications-section {
     background: var(--dark-bg);
 }
@@ -816,6 +816,143 @@ cite {
     background-clip: text;
     font-weight: 700;
 }
+
+/* --- DÉBUT DES NOUVEAUX STYLES POUR LA SECTION CERTIFICATIONS (AVEC BOUTONS CORRIGÉS) --- */
+
+/* Titre de la Section (pour la nouvelle structure HTML) */
+.section-header .TitrePresentation-divider {
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-primary);
+    margin: 0 auto;
+    border: none;
+    border-radius: 2px;
+}
+
+/* Section Certifications */
+.certifications-section {
+    background: var(--dark-bg);
+}
+
+/* Conteneur des Cartes */
+.Certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style de la carte de certification */
+.certification {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.certification:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow);
+}
+
+.certification_image {
+    margin-bottom: 15px;
+}
+
+.certification_image img {
+    border-radius: 8px;
+    max-width: 100%; 
+    height: auto;
+}
+
+.certification_description {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.certification_titre {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.certification_description p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Style du lien (pour le positionnement du bouton) */
+.certification_lien {
+    text-decoration: none;
+    margin-top: auto;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* --- BOUTON CORRIGÉ (Style .btn-secondary) --- */
+.certification_bouton {
+    /* Style de base hérité du .btn-secondary */
+    padding: 1rem 2rem; 
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    justify-content: center;
+    
+    /* Couleurs du btn-secondary */
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    width: 100%;
+}
+
+.certification_bouton:hover {
+    /* Effet hover du btn-secondary */
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+}
+
+.certification_bouton .icon {
+    font-size: 1.2em;
+    margin-right: 0.5rem;
+}
+/* --- FIN BOUTON CORRIGÉ --- */
+
+
+/* Design réactif pour les petits écrans */
+@media (max-width: 480px) {
+    .Certifications-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FIN DES STYLES CERTIFICATIONS */
 
 /* Section Compétences */
 .skills-section {
@@ -1339,129 +1476,3 @@ cite {
         grid-template-columns: 1fr;
     }
 }
-
-/* --- NOUVEAUX STYLES POUR LA SECTION CERTIFICATIONS --- */
-
-/* Titre de la Section (pour la nouvelle structure HTML) */
-.section-header .TitrePresentation-divider {
-    width: 100px;
-    height: 4px;
-    background: var(--gradient-primary);
-    margin: 0 auto;
-    border: none; /* Remplacer la règle par défaut des <hr> */
-    border-radius: 2px;
-}
-
-/* Section Certifications */
-.certifications-section {
-    background: var(--dark-bg); /* S'aligne avec votre alternance de fond */
-}
-
-/* Conteneur des Cartes (Utilisation du Flexbox ou Grid pour l'alignement) */
-.Certifications-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px minimum par carte */
-    gap: 30px; /* Espace entre les cartes */
-    padding: 20px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Style de la carte de certification */
-.certification {
-    background: var(--card-bg);
-    padding: 25px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: var(--transition);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrer l'image et le texte */
-    text-align: center;
-}
-
-.certification:hover {
-    transform: translateY(-6px); /* Petit effet de survol */
-    box-shadow: var(--shadow-glow); /* Utilisation de votre effet glow existant */
-}
-
-.certification_image {
-    margin-bottom: 15px;
-}
-
-.certification_image img {
-    border-radius: 8px;
-    /* Assure une taille maximale si l'image est trop grande */
-    max-width: 100%; 
-    height: auto;
-}
-
-.certification_description {
-    flex-grow: 1; /* Permet à la description de prendre l'espace restant */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Pour pousser le bouton vers le bas si nécessaire */
-    width: 100%;
-}
-
-.certification_titre {
-    font-size: 1.4em;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.certification_description p {
-    color: var(--text-secondary);
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-/* Style du bouton d'attestation (conforme à votre style .btn existant) */
-.certification_lien {
-    text-decoration: none; /* Le lien contient le bouton */
-    margin-top: auto; /* Pousser le bouton vers le bas */
-    width: 100%;
-    max-width: 250px; /* Pour éviter que le bouton soit trop large */
-}
-
-.certification_bouton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 18px;
-    background: var(--accent-color); /* Utilisation de la couleur accentuation */
-    color: var(--dark-bg); /* Texte noir sur l'accentuation */
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-weight: 600;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.1rem;
-    transition: var(--transition);
-    width: 100%;
-}
-
-.certification_bouton:hover {
-    background: var(--primary-color);
-    color: white;
-    box-shadow: 0 0 15px var(--primary-color);
-    transform: translateY(-2px);
-}
-
-.certification_bouton .icon {
-    font-size: 1.2em;
-    margin-right: 8px; 
-}
-
-/* Design réactif pour les petits écrans */
-@media (max-width: 480px) {
-    .Certifications-container {
-        grid-template-columns: 1fr; /* Une seule colonne */
-    }
-}
-
-/* FIN DES STYLES CERTIFICATIONS */
